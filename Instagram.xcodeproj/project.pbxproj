@@ -17,6 +17,7 @@
 		A754D5D92464E09100208968 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A754D5D72464E09100208968 /* PostTableViewCell.swift */; };
 		A754D5DA2464E09100208968 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A754D5D82464E09100208968 /* PostTableViewCell.xib */; };
 		A767397D24580D0F008CF3B3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A767397C24580D0F008CF3B3 /* TabBarController.swift */; };
+		A776B2BC2469348600D51CBF /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A776B2BB2469348600D51CBF /* CommentViewController.swift */; };
 		A78A10F3245464A100F48DD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78A10F2245464A100F48DD8 /* AppDelegate.swift */; };
 		A78A10F5245464A100F48DD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78A10F4245464A100F48DD8 /* SceneDelegate.swift */; };
 		A78A10FA245464A100F48DD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A78A10F8245464A100F48DD8 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 		A754D5D72464E09100208968 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		A754D5D82464E09100208968 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		A767397C24580D0F008CF3B3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		A776B2BB2469348600D51CBF /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		A78A10EF245464A100F48DD8 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A78A10F2245464A100F48DD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A78A10F4245464A100F48DD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				A754D5D52464DF8100208968 /* PostData.swift */,
 				A754D5D72464E09100208968 /* PostTableViewCell.swift */,
 				A754D5D82464E09100208968 /* PostTableViewCell.xib */,
+				A776B2BB2469348600D51CBF /* CommentViewController.swift */,
 				A78A10F8245464A100F48DD8 /* Main.storyboard */,
 				A78A10FB245464A300F48DD8 /* Assets.xcassets */,
 				A78A10FD245464A300F48DD8 /* LaunchScreen.storyboard */,
@@ -246,6 +249,7 @@
 				A72743682457D63000F148B8 /* SettingViewController.swift in Sources */,
 				A754D5D62464DF8100208968 /* PostData.swift in Sources */,
 				A72743602457D5CA00F148B8 /* LoginViewController.swift in Sources */,
+				A776B2BC2469348600D51CBF /* CommentViewController.swift in Sources */,
 				A78A10F3245464A100F48DD8 /* AppDelegate.swift in Sources */,
 				A78A10F5245464A100F48DD8 /* SceneDelegate.swift in Sources */,
 				A7EF4865245FD8C000229E0D /* Const.swift in Sources */,

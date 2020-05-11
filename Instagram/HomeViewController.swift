@@ -79,19 +79,23 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PostTableViewCell
         cell.setPostData(postArray[indexPath.row])
 
-        // セル内のボタンのアクションをソースコードで設定する
+        // セル内のボタンのアクションをソースコードで設定する（いいね、コメント）
         cell.likeButton.addTarget(self, action:#selector(handleButton(_:forEvent:)), for: .touchUpInside)
+        cell.commentButton.addTarget(self, action:#selector(handle2Button(_:forEvent:)), for: .touchUpInside)
 
         return cell
     }
     
-    // セル内のボタンがタップされた時に呼ばれるメソッド
+    // セル内の「いいねボタン」がタップされた時に呼ばれるメソッド
     @objc func handleButton(_ sender: UIButton, forEvent event: UIEvent) {
         print("DEBUG_PRINT: likeボタンがタップされました。")
 
         // タップされたセルのインデックスを求める
+        // UITouch型のタッチ情報を取り出す
         let touch = event.allTouches?.first
+        // タッチした座標(TableView内の座標)を割り出す
         let point = touch!.location(in: self.tableView)
+        // タッチした座標がtableView内のどのindexPath位置になるのかを取得
         let indexPath = tableView.indexPathForRow(at: point)
 
         // 配列からタップされたインデックスのデータを取り出す
@@ -112,6 +116,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let postRef = Firestore.firestore().collection(Const.PostPath).document(postData.id)
             postRef.updateData(["likes": updateValue])
         }
+    }
+    
+    // セル内の「コメントボタン」がタップされた時に呼ばれるメソッド
+    @objc func handle2Button(_ sender: UIButton, forEvent event: UIEvent) {
+        print("DEBUG_PRINT: commentボタンがタップされました。")
+
+        // コメント入力画面に遷移
+        performSegue(withIdentifier: "cellSegue",sender: nil)
     }
     
 }

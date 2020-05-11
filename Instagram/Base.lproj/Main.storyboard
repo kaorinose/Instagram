@@ -110,6 +110,7 @@
                     <tabBarItem key="tabBarItem" title="ホーム" image="home" id="xV4-RC-C41"/>
                     <connections>
                         <outlet property="tableView" destination="A21-np-Qn6" id="FCC-3c-unT"/>
+                        <segue destination="B9B-m3-qsH" kind="show" identifier="cellSegue" id="Dn2-YY-tWL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ynr-a8-r6m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -235,6 +236,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pg5-kQ-z1y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1501" y="781"/>
+        </scene>
+        <!--Comment View Controller-->
+        <scene sceneID="MvF-oJ-znf">
+            <objects>
+                <viewController storyboardIdentifier="Comment" id="B9B-m3-qsH" customClass="CommentViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QB6-eg-NQe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="コメント" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h5k-Um-5fx">
+                                <rect key="frame" x="57" y="80" width="300" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="H29-sC-j4K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTH-2h-56y">
+                                <rect key="frame" x="57" y="124" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="ivA-hr-hrQ"/>
+                                </constraints>
+                                <state key="normal" title="コメント投稿" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="commentPostButton:" destination="B9B-m3-qsH" eventType="touchUpInside" id="1Y2-5s-fTO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ZQ-lf-VDR">
+                                <rect key="frame" x="57" y="174" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="MQx-Ne-VQk"/>
+                                </constraints>
+                                <state key="normal" title="キャンセル" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="commentCancelButton:" destination="B9B-m3-qsH" eventType="touchUpInside" id="Onh-DE-9Wk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ZTH-2h-56y" firstAttribute="top" secondItem="h5k-Um-5fx" secondAttribute="bottom" constant="10" id="H5l-GU-yew"/>
+                            <constraint firstItem="h5k-Um-5fx" firstAttribute="top" secondItem="Pin-gL-uf6" secondAttribute="top" constant="80" id="RXG-i5-Z6F"/>
+                            <constraint firstItem="h5k-Um-5fx" firstAttribute="centerX" secondItem="QB6-eg-NQe" secondAttribute="centerX" id="UY0-1G-0g5"/>
+                            <constraint firstItem="2ZQ-lf-VDR" firstAttribute="top" secondItem="ZTH-2h-56y" secondAttribute="bottom" constant="10" id="nSl-4R-Nyd"/>
+                            <constraint firstItem="2ZQ-lf-VDR" firstAttribute="centerX" secondItem="QB6-eg-NQe" secondAttribute="centerX" id="yIU-DT-mxb"/>
+                            <constraint firstItem="ZTH-2h-56y" firstAttribute="centerX" secondItem="QB6-eg-NQe" secondAttribute="centerX" id="zHq-DW-Lpd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Pin-gL-uf6"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5Qj-gf-FGW"/>
+                    <connections>
+                        <outlet property="commentTextField" destination="h5k-Um-5fx" id="pCT-Kd-Yg5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SHf-23-4aJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1272" y="781"/>
         </scene>
         <!--設定-->
         <scene sceneID="fga-mU-77O">
