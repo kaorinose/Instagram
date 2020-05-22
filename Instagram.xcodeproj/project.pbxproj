@@ -13,6 +13,7 @@
 		A72743642457D5FD00F148B8 /* ImageSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72743632457D5FD00F148B8 /* ImageSelectViewController.swift */; };
 		A72743662457D61800F148B8 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72743652457D61800F148B8 /* PostViewController.swift */; };
 		A72743682457D63000F148B8 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72743672457D63000F148B8 /* SettingViewController.swift */; };
+		A73DD1692477908D009FACC7 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73DD1682477908D009FACC7 /* Comment.swift */; };
 		A754D5D62464DF8100208968 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A754D5D52464DF8100208968 /* PostData.swift */; };
 		A754D5D92464E09100208968 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A754D5D72464E09100208968 /* PostTableViewCell.swift */; };
 		A754D5DA2464E09100208968 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A754D5D82464E09100208968 /* PostTableViewCell.xib */; };
@@ -35,6 +36,7 @@
 		A72743632457D5FD00F148B8 /* ImageSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectViewController.swift; sourceTree = "<group>"; };
 		A72743652457D61800F148B8 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		A72743672457D63000F148B8 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		A73DD1682477908D009FACC7 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		A754D5D52464DF8100208968 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		A754D5D72464E09100208968 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		A754D5D82464E09100208968 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				A72743672457D63000F148B8 /* SettingViewController.swift */,
 				A767397C24580D0F008CF3B3 /* TabBarController.swift */,
 				A7EF4864245FD8C000229E0D /* Const.swift */,
+				A73DD1682477908D009FACC7 /* Comment.swift */,
 				A754D5D52464DF8100208968 /* PostData.swift */,
 				A754D5D72464E09100208968 /* PostTableViewCell.swift */,
 				A754D5D82464E09100208968 /* PostTableViewCell.xib */,
@@ -249,6 +252,7 @@
 				A72743682457D63000F148B8 /* SettingViewController.swift in Sources */,
 				A754D5D62464DF8100208968 /* PostData.swift in Sources */,
 				A72743602457D5CA00F148B8 /* LoginViewController.swift in Sources */,
+				A73DD1692477908D009FACC7 /* Comment.swift in Sources */,
 				A776B2BC2469348600D51CBF /* CommentViewController.swift in Sources */,
 				A78A10F3245464A100F48DD8 /* AppDelegate.swift in Sources */,
 				A78A10F5245464A100F48DD8 /* SceneDelegate.swift in Sources */,

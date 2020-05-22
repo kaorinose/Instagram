@@ -122,8 +122,22 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @objc func handle2Button(_ sender: UIButton, forEvent event: UIEvent) {
         print("DEBUG_PRINT: commentボタンがタップされました。")
 
+        // タップされたセルのインデックスを求める
+        // UITouch型のタッチ情報を取り出す
+        let touch = event.allTouches?.first
+        // タッチした座標(TableView内の座標)を割り出す
+        let point = touch!.location(in: self.tableView)
+        // タッチした座標がtableView内のどのindexPath位置になるのかを取得
+        let indexPath = tableView.indexPathForRow(at: point)
+
+        // 配列からタップされたインデックスのデータを取り出す
+        let postData = postArray[indexPath!.row]
+        
         // コメント入力画面に遷移
-        performSegue(withIdentifier: "cellSegue",sender: nil)
+        let CommentViewController = self.storyboard?.instantiateViewController(withIdentifier: "Comment") as! CommentViewController
+        CommentViewController.postData = postData
+        present(CommentViewController, animated: true, completion: nil)
+        
     }
     
 }

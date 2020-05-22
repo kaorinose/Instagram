@@ -49,6 +49,7 @@ class PostTableViewCell: UITableViewCell {
             formatter.dateFormat = "yyyy-MM-dd HH:mm"
             let dateString = formatter.string(from: date)
             self.dateLabel.text = dateString
+            
         }
 
         // いいね数の表示
@@ -63,6 +64,26 @@ class PostTableViewCell: UITableViewCell {
             let buttonImage = UIImage(named: "like_none")
             self.likeButton.setImage(buttonImage, for: .normal)
         }
+        
+        // コメントの表示
+        //self.commentLabel.text = "\(postData.commentname) : \(postData.comment)"
+        
+        // 【5/18追加：悩み中（postDataにcommentを作る？）】
+        // -----------------------------------------------------------------------
+        //コメントの表示
+        // コメント格納用の配列allCommentを空に設定する
+        var allComment = ""
+        //print(postData.comments[0])
+        // postData.commentの中から要素をひとつずつ取り出すのを繰り返す、というのがcomment
+        for commentLiv in postData.comments{
+            // 複数のコメントがある場合にコメントを全てallCommentに入れる
+            allComment += "\(commentLiv)"
+            print("test")
+            // commentLabelに表示するのはallComment（commentを足していったもの）
+            self.commentLabel.text = allComment
+        }
+        // -----------------------------------------------------------------------
+        
     }
     
 }
