@@ -65,24 +65,21 @@ class PostTableViewCell: UITableViewCell {
             self.likeButton.setImage(buttonImage, for: .normal)
         }
         
-        // コメントの表示
-        //self.commentLabel.text = "\(postData.commentname) : \(postData.comment)"
-        
-        // 【5/18追加：悩み中（postDataにcommentを作る？）】
-        // -----------------------------------------------------------------------
         //コメントの表示
         // コメント格納用の配列allCommentを空に設定する
         var allComment = ""
-        //print(postData.comments[0])
-        // postData.commentの中から要素をひとつずつ取り出すのを繰り返す、というのがcomment
+        var commentLiv2 = ""
+        // コメントラベルに複数行の表示が行えるように設定する
+        commentLabel.numberOfLines = 0;
+        // postData.commentsの中から要素を１行ずつ取り出しcommentLivへ格納後、表示に合わせて要素を取り出す
         for commentLiv in postData.comments{
-            // 複数のコメントがある場合にコメントを全てallCommentに入れる
-            allComment += "\(commentLiv)"
-            print("test")
-            // commentLabelに表示するのはallComment（commentを足していったもの）
+            commentLiv2 = "\(commentLiv["commentname"]!) ： \(commentLiv["comment"]!)"
+            // 複数のコメントがある場合に「コメント入力者名 : コメント内容」の形の文字列にし、
+            // それに改行を加えながら全てのコメントを全てallCommentに入れる
+            allComment += (commentLiv2 + "\n")
+            // allCommentの内容をcommentLabelに表示する
             self.commentLabel.text = allComment
         }
-        // -----------------------------------------------------------------------
         
     }
     

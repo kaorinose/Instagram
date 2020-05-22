@@ -19,7 +19,7 @@ class PostData: NSObject {
     //コメント用
     var commentname: String?
     var comment: String?
-    var comments: [Comment] = []
+    var comments: [[String:String]] = []
     
     init(document: QueryDocumentSnapshot) {
         self.id = document.documentID
@@ -54,9 +54,10 @@ class PostData: NSObject {
             self.comment = comment
         }
 
-        if let comments = postDic["comments"] as? [Comment] {
+        if let comments = postDic["comments"] as? [[String:String]] {
             self.comments = comments
         }
+
     }
 
 }

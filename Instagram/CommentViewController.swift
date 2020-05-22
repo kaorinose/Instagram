@@ -24,6 +24,7 @@ class CommentViewController: UIViewController {
         
         // FireStoreに投稿データを保存する
         let commentname = Auth.auth().currentUser?.displayName
+        
         // コメントの投稿を配列に追加する
         let postDic = [
             "commentname": commentname!,
